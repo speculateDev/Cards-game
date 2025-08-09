@@ -64,3 +64,11 @@ const createFolder = async (folderName, parentFolderPath = "/") => {
     throw error;
   }
 };
+
+export const deleteFolder = async (folder, parentFolderPath = "/") => {
+  try {
+    await imagekit.deleteFolder(`${parentFolderPath}${folder}`);
+  } catch (error) {
+    console.error("Error deleting folder: ", error);
+  }
+};
