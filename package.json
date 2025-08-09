@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@neondatabase/serverless": "^1.0.1",
+    "@vercel/node": "^5.3.11",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "imagekit": "^6.0.0"

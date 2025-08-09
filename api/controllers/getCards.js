@@ -1,11 +1,11 @@
 import { sql } from "../lib/db.js";
 
-export async function getCards(req, res) {
+export async function getCards() {
   try {
     const data = await sql`SELECT * FROM cards`;
-    res.status(200).json(data);
+    return data;
   } catch (error) {
     console.error("error in getCards: ", error);
-    res.status(500).json({ error: "Internal server error" });
+    // res.status(500).json({ error: "Internal server error" });
   }
 }
