@@ -1,6 +1,6 @@
 import { useState, type MouseEvent, useCallback } from "react";
 import type { Card } from "../schemas";
-import BackSide from "../assets/back-side.png";
+import BackSide from "/images/back-side.png";
 
 function CardComponent({
   clicked,

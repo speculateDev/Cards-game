@@ -20,7 +20,9 @@ function App() {
   useEffect(() => {
     async function fetchCards() {
       setIsLoading(true);
-      const res = await fetch("api");
+      const res = await fetch(
+        "https://cards-game-321.netlify.app/.netlify/functions/index"
+      );
       const data = await res.json();
       setCards(data);
       setIsLoading(false);
@@ -34,7 +36,7 @@ function App() {
       <div className="h-screen w-full relative">
         <div
           style={{
-            backgroundImage: "url(./src/assets/cover.png)",
+            backgroundImage: "url(/images/cover.png)",
             backgroundSize: "cover",
             backgroundOrigin: "center",
           }}
@@ -49,7 +51,7 @@ function App() {
     <div className="min-h-screen w-full relative">
       <div
         style={{
-          backgroundImage: "url(./src/assets/cover.png)",
+          backgroundImage: "url(/images/cover.png)",
           backgroundSize: "cover",
           backgroundOrigin: "center",
         }}
