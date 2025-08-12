@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: "Playball", cursive;
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-bold text-sm sm:text-lg transition-all duration-200 cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply border-1 border-gray-300 text-gray-300 hover:bg-gray-300 hover:text-gray-900;
+  }
+
+  .btn-scale {
+    @apply sm:hover:scale-125;
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 rounded-lg font-bold text-2xl transition-all duration-500 cursor-pointer underline underline-offset-8 hover:decoration-transparent;
+  }
+
+  .btn-text {
+    @apply underline underline-offset-4 text-3xl hover:no-underline transition duration-300;
+  }
+}
